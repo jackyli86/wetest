@@ -2,11 +2,11 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="src">
-      <UniqueIdentifier>{eb34f2cf-038f-4a0a-8594-01f5aeb271fb}</UniqueIdentifier>
+      <UniqueIdentifier>{d972c416-0ef4-43b4-8a12-c267afcfb2b6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="weconsole.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
