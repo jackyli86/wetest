@@ -4,10 +4,21 @@
     <Filter Include="src">
       <UniqueIdentifier>{d972c416-0ef4-43b4-8a12-c267afcfb2b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\constants">
+      <UniqueIdentifier>{08dee00f-9f9d-4396-86c2-c54869b1f24e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="test_stl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h">
+      <Filter>src\constants</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

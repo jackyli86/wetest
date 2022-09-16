@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
+#include <gtest/gtest.h>
 
-int main()
+int main(int argc, char** argv)
 {
-    std::cout << "Hello World!\n";
+    ::testing::InitGoogleTest(&argc, argv);
+    
+    return RUN_ALL_TESTS();
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
