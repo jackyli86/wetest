@@ -4,21 +4,36 @@
     <Filter Include="src">
       <UniqueIdentifier>{d972c416-0ef4-43b4-8a12-c267afcfb2b6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\constants">
-      <UniqueIdentifier>{08dee00f-9f9d-4396-86c2-c54869b1f24e}</UniqueIdentifier>
+    <Filter Include="src\test">
+      <UniqueIdentifier>{529bacbd-ca5b-4bc7-8116-bf85e594c9fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\classes">
+      <UniqueIdentifier>{9f5ba12a-bc2f-45d8-9730-8bbee2670497}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="test_stl.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="test_vector.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="test_cstream.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="test_list.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="test_map.cpp">
+      <Filter>src\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
-      <Filter>src\constants</Filter>
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="cstream.h">
+      <Filter>src\classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

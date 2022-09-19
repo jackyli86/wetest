@@ -5,13 +5,19 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <iostream>
 #include <vector>
-#include <list>
 
 using namespace std;
 
+typedef struct TA { char sz; } TA;
+class TB {};
 TEST(TEST_STL, TEST_STL_VECTOR) {
+
+	TA ta;
+	TB tb;
+	cout << "TB sizeof = " << sizeof(tb) << endl;
+
+	cout << "TA sizeof = " << sizeof(ta) << endl;
 
 	vector<int> v1{1,2,3,4,5}, v2;
 	EXPECT_EQ(5, v1.size());
@@ -85,32 +91,5 @@ TEST(TEST_STL, TEST_STL_VECTOR) {
 	}
 }
 
-TEST(TEST_STL, TEST_STL_LIST) {
-	
-	list<int> tlist;
 
-	tlist.push_back(1);
-	tlist.push_back(2);
-	tlist.push_back(3);
 
-	EXPECT_EQ(1, tlist.front());
-	EXPECT_EQ(3, tlist.back());
-
-	tlist.push_front(0);
-
-	EXPECT_EQ(0, tlist.front());
-	EXPECT_EQ(3, tlist.back());
-	
-	BUILDIN_PRINT(tlist);
-	tlist.remove_if([](int value) { return value == 1 || value == 2; });
-	BUILDIN_PRINT(tlist);
-
-	tlist.unique();
-	BUILDIN_PRINT(tlist);
-
-	list<int> tlist2{4,5,6};
-	tlist.splice(tlist.end(), tlist2);
-	BUILDIN_PRINT(tlist);
-	BUILDIN_PRINT(tlist2);
-
-}
