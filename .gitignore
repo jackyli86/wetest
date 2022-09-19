@@ -33,3 +33,6 @@
 
 # Ignore Some Dir
 .vs/
+*/x64
+*/Debug
+*/Release
