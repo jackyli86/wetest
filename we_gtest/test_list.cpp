@@ -1,7 +1,6 @@
-#pragma once
+
 #include "stdafx.h"
 
-using namespace std;
 
 TEST(TEST_STL, TEST_STL_LIST) {
 

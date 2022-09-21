@@ -1,5 +1,3 @@
-#pragma once
-
 #include "stdafx.h"
 
 TEST(TEST_STL, TEST_STL_VECTOR) {
