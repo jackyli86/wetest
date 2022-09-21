@@ -1,19 +1,12 @@
 #pragma once
-#include <gtest/gtest.h>
-
-#include "common.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <map>
-#include <unordered_map>
+#include "stdafx.h"
 
 using namespace std;
 
 TEST(TEST_STL, TEST_STL_MAP) {
 	map<int, int> tmap;
 	tmap.insert({ 1,1 });
-	tmap.insert({ 1,2 });
+	tmap.insert({ 1,2 });	// key already exist , the value is the old one
 	tmap.insert({ 2,2 });
 
 	BUILDIN_PRINT(tmap);

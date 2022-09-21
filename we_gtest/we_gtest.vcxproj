@@ -51,6 +51,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -66,6 +67,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -76,14 +78,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="test_class_construct.cpp" />
+    <ClCompile Include="test_class_singleton.cpp" />
     <ClCompile Include="test_list.cpp" />
     <ClCompile Include="test_map.cpp" />
-    <ClCompile Include="test_cstream.cpp" />
+    <ClCompile Include="test_class_stream.cpp" />
     <ClCompile Include="test_vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="class_construct.h" />
+    <ClInclude Include="class_singleton.h" />
     <ClInclude Include="common.h" />
-    <ClInclude Include="cstream.h" />
+    <ClInclude Include="class_stream.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

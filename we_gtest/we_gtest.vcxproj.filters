@@ -18,7 +18,7 @@
     <ClCompile Include="test_vector.cpp">
       <Filter>src\test</Filter>
     </ClCompile>
-    <ClCompile Include="test_cstream.cpp">
+    <ClCompile Include="test_class_stream.cpp">
       <Filter>src\test</Filter>
     </ClCompile>
     <ClCompile Include="test_list.cpp">
@@ -27,12 +27,30 @@
     <ClCompile Include="test_map.cpp">
       <Filter>src\test</Filter>
     </ClCompile>
+    <ClCompile Include="test_class_construct.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="test_class_singleton.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="cstream.h">
+    <ClInclude Include="class_stream.h">
+      <Filter>src\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="class_construct.h">
+      <Filter>src\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="class_singleton.h">
       <Filter>src\classes</Filter>
     </ClInclude>
   </ItemGroup>

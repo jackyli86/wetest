@@ -1,23 +1,8 @@
 #pragma once
-#include <gtest/gtest.h>
 
-#include "common.h"
+#include "stdafx.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <vector>
-
-using namespace std;
-
-typedef struct TA { char sz; } TA;
-class TB {};
 TEST(TEST_STL, TEST_STL_VECTOR) {
-
-	TA ta;
-	TB tb;
-	cout << "TB sizeof = " << sizeof(tb) << endl;
-
-	cout << "TA sizeof = " << sizeof(ta) << endl;
 
 	vector<int> v1{1,2,3,4,5}, v2;
 	EXPECT_EQ(5, v1.size());

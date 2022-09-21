@@ -2,35 +2,35 @@
 
 #include <sstream>
 
-class cstream
+class class_stream
 {
 
 public :
-	cstream() {}
+	class_stream() {}
 
-	~cstream() {}
+	~class_stream() {}
 
 protected:
 	std::stringstream m_stringstream;
 
 public:
 
-	cstream& operator << (int val) {
+	class_stream& operator << (int val) {
 		m_stringstream << val;
 		return *this;
 	}
 
-	cstream& operator << (const std::string val) {
+	class_stream& operator << (const std::string val) {
 		m_stringstream << val;
 		return *this;
 	}
 
-	cstream& operator << (double val) {
+	class_stream& operator << (double val) {
 		m_stringstream << val;
 		return *this;
 	}
 
-	cstream& operator << (float val) {
+	class_stream& operator << (float val) {
 		m_stringstream << val;
 		return *this;
 	}
@@ -39,7 +39,7 @@ public:
 		return m_stringstream.str();
 	}
 
-	void operator += (cstream& right) {
+	void operator += (class_stream& right) {
 		m_stringstream << right.str();
 	}
 
