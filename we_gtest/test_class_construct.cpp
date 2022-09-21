@@ -12,7 +12,5 @@ TEST(TEST_CLASS, TEST_CLASS_CONSTRUCT) {
 	class_construct b = a;
 
 	class_construct c(std::move(get_default_class()));
-	cout << "num = " << c.get_num() << endl;
-	auto i = 0;
-	while(i++ < 100000){}
+
 }
