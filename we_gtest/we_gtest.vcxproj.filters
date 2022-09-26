@@ -10,6 +10,9 @@
     <Filter Include="src\classes">
       <UniqueIdentifier>{9f5ba12a-bc2f-45d8-9730-8bbee2670497}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\pb">
+      <UniqueIdentifier>{fdb7f670-f031-4c20-8de4-164832a27243}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +39,12 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="test_protobuf.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="echo_service.pb.cc">
+      <Filter>src\pb</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -52,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="class_singleton.h">
       <Filter>src\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="echo_service.pb.h">
+      <Filter>src\pb</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
