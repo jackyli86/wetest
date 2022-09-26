@@ -36,11 +36,13 @@
 #include <string>
 #include <vector>
 
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/descriptor.pb.h>
-#include <google/protobuf/io/zero_copy_stream.h>
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/descriptor.pb.h"
+#include "google/protobuf/io/zero_copy_stream.h"
 
-#include <google/protobuf/port_def.inc>
+// clang-format off
+#include "google/protobuf/port_def.inc"
+// clang-format on
 
 namespace google {
 namespace protobuf {
@@ -63,6 +65,10 @@ void PROTOC_EXPORT SetUseProtoPackageAsDefaultPrefix(bool on_or_off);
 std::string PROTOC_EXPORT GetProtoPackagePrefixExceptionList();
 void PROTOC_EXPORT SetProtoPackagePrefixExceptionList(
     const std::string& file_path);
+// Get/Set a prefix to add before the prefix generated from the package name.
+// This is only used when UseProtoPackageAsDefaultPrefix() is True.
+std::string PROTOC_EXPORT GetForcedPackagePrefix();
+void PROTOC_EXPORT SetForcedPackagePrefix(const std::string& prefix);
 
 // Generator Prefix Validation Options (see objectivec_generator.cc for a
 // description of each):
@@ -75,10 +81,10 @@ struct Options {
 };
 
 // Escape C++ trigraphs by escaping question marks to "\?".
-std::string PROTOC_EXPORT EscapeTrigraphs(const std::string& to_escape);
+std::string PROTOC_EXPORT EscapeTrigraphs(absl::string_view to_escape);
 
-// Remove white space from either end of a StringPiece.
-void PROTOC_EXPORT TrimWhitespace(StringPiece* input);
+// Remove white space from either end of a absl::string_view.
+void PROTOC_EXPORT TrimWhitespace(absl::string_view* input);
 
 // Returns true if the name requires a ns_returns_not_retained attribute applied
 // to it.
@@ -87,6 +93,10 @@ bool PROTOC_EXPORT IsRetainedName(const std::string& name);
 // Returns true if the name starts with "init" and will need to have special
 // handling under ARC.
 bool PROTOC_EXPORT IsInitName(const std::string& name);
+
+// Returns true if the name requires a cf_returns_not_retained attribute applied
+// to it.
+bool PROTOC_EXPORT IsCreateName(const std::string& name);
 
 // Gets the objc_class_prefix or the prefix made from the proto package.
 std::string PROTOC_EXPORT FileClassPrefix(const FileDescriptor* file);
@@ -287,7 +297,7 @@ class PROTOC_EXPORT LineConsumer {
  public:
   LineConsumer();
   virtual ~LineConsumer();
-  virtual bool ConsumeLine(const StringPiece& line, std::string* out_error) = 0;
+  virtual bool ConsumeLine(const absl::string_view& line, std::string* out_error) = 0;
 };
 
 bool PROTOC_EXPORT ParseSimpleFile(const std::string& path,
@@ -323,7 +333,7 @@ class PROTOC_EXPORT ImportWriter {
     ProtoFrameworkCollector(std::map<std::string, std::string>* inout_proto_file_to_framework_name)
         : map_(inout_proto_file_to_framework_name) {}
 
-    virtual bool ConsumeLine(const StringPiece& line, std::string* out_error) override;
+    virtual bool ConsumeLine(const absl::string_view& line, std::string* out_error) override;
 
    private:
     std::map<std::string, std::string>* map_;
@@ -348,6 +358,6 @@ class PROTOC_EXPORT ImportWriter {
 }  // namespace protobuf
 }  // namespace google
 
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"
 
 #endif  // GOOGLE_PROTOBUF_COMPILER_OBJECTIVEC_HELPERS_H__
