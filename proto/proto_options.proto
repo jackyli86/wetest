@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.FileOptions {
+    string file_name    = 1000;
+    int64  create_time  = 1001;
+}
+
+option (file_name) = "hp.proto";
+option (create_time) = 20220928;
+
+message FileOptionPb {
+    string greeting = 1;
+}
